@@ -1,0 +1,29 @@
+ALGORITHM mouna algo 
+VAR
+    phrase: STRING := "la vie est belle.";
+    nb_char:INTEGER :=0;
+    nb_mots:INTEGER :=0;
+    nb_voy:INTEGER :=0;
+   
+
+BEGIN
+    WHILE (phrase[nb_char] <> ".") DO
+        nb_char:= nb_char+1;
+        IF (phrase[nb_char]=" ") THEN
+            nb_mots= nb_mots+1;
+        END_IF
+
+       IF(phrase[nb_char]="a" OR
+       phrase[nb_char]="i" OR
+       phrase[nb_char]="e") THEN
+            nb_voy= nb_voy+1;      
+        END_IF
+        
+    END_WHILE
+    nb_char := nb_char+1;
+    nb_mots= nb_mots+1;
+    write("nombre de caractère",nb_char);
+    write("nombre de mots",nb_mots)
+    write("nombre de voyelle",nb_voy)
+
+END 
